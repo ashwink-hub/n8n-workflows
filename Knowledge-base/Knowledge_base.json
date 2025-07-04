@@ -1,0 +1,1238 @@
+{
+  "name": "Knowledge-base",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Add documents",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Upload your document",
+              "fieldType": "file",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "2ff65f00-5ae1-46e7-9849-a7aed760aaf9",
+      "name": "On form submission",
+      "webhookId": "7935718c-9773-4181-bded-2b058bf6e1ef"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": "n8n_tutorial",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1.3,
+      "position": [
+        220,
+        0
+      ],
+      "id": "a25916e8-b23a-410c-a834-ea1a7334a043",
+      "name": "Postgres PGVector Store",
+      "credentials": {
+        "postgres": {
+          "id": "O9Sr8Ew9X1SAIJap",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "nomic-embed-text:latest"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOllama",
+      "typeVersion": 1,
+      "position": [
+        140,
+        200
+      ],
+      "id": "7d6e3727-7961-484b-a4b8-15b1b9d4edd1",
+      "name": "Embeddings Ollama",
+      "credentials": {
+        "ollamaApi": {
+          "id": "mXG4i077ITINavIv",
+          "name": "Ollama account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataType": "binary",
+        "loader": "jsonLoader",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        360,
+        220
+      ],
+      "id": "013c2178-3690-4c58-bc3f-757f8d3d978b",
+      "name": "Default Data Loader"
+    }
+  ],
+  "pinData": {
+    "Postgres PGVector Store": [
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 1,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "services_overview"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 2,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "A S CodeLabs provides custom software development, web and mobile app development, digital marketing services, focusing on dashboards, analytics, AI/ML, SaaS applications, and more."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 3,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 4,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "startup_as_a_service"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 5,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Startup-as-a-Service bundles ideation, validation, design, development, branding, legal, and launch marketing—building MVPs in 60–90 days with full-stack teams."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 6,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 7,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "rise_of_ai_startups"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 8,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "In 2025 AI startups boom due to open-source models, affordable cloud compute, surge in VC funding. Key verticals: Generative AI, Agents, Healthcare AI, FinTech, AI infrastructure."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 9,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 10,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "own_ai_startup_guide"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 11,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Guide to launching an AI startup: define idea, validate with research, build lean MVP within 90 days, manage burn rate/runway, market early, iterate, fundraise."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 12,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 13,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "ecommerce_portal_case"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 14,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Modern eCommerce portal built using T3 Turbo stack: Next.js, tRPC, Prisma, Tailwind; features include PCI‑compliant payments, Redis caching, SSR, security best practices."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 15,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "case_study"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 16,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "faq_summary"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 17,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "FAQ covers payment structure, accepted currencies and modes of payment, hosting details, and service deliverables."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 18,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage_FAQ"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 19,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "company_policy"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 20,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Privacy Policy, Terms, and Code of Conduct emphasize data protection, user rights, anti-harassment, inclusive community standards."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 21,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "legal"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 22,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "why_choose_us"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 23,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 4
+              }
+            }
+          },
+          "pageContent": "Why Choose Us?\n1. Deliver On Time: We provide cutting-edge IT services with a commitment to timeliness, efficiency, and excellence.\n2. Empowering Your Business: Providing tailored IT solutions and services to enhance efficiency, security, innovation, and long-term growth.\n3. Industry-Standard IT Solutions: Our solutions are designed to grow with your business, ensuring long-term success and scalability."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 24,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Why Choose Us"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 25,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 26,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "contact_info"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 27,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "You can contact A S CodeLabs via email at admin@ascodelabs.com or by phone at +91 7806902301."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 28,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Contact"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 29,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "footer"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 30,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "services_overview"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 31,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "A S CodeLabs provides custom software development, web and mobile app development, digital marketing services, focusing on dashboards, analytics, AI/ML, SaaS applications, and more."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 32,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 33,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 34,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "startup_as_a_service"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 35,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Startup-as-a-Service bundles ideation, validation, design, development, branding, legal, and launch marketing—building MVPs in 60–90 days with full-stack teams."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 36,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 37,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 38,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "rise_of_ai_startups"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 39,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "In 2025 AI startups boom due to open-source models, affordable cloud compute, surge in VC funding. Key verticals: Generative AI, Agents, Healthcare AI, FinTech, AI infrastructure."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 40,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 41,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 42,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "own_ai_startup_guide"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 43,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Guide to launching an AI startup: define idea, validate with research, build lean MVP within 90 days, manage burn rate/runway, market early, iterate, fundraise."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 44,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 45,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "blog"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 46,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "ecommerce_portal_case"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 47,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Modern eCommerce portal built using T3 Turbo stack: Next.js, tRPC, Prisma, Tailwind; features include PCI‑compliant payments, Redis caching, SSR, security best practices."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 48,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "case_study"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 49,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "case_study"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 50,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "faq_summary"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 51,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "FAQ covers payment structure, accepted currencies and modes of payment, hosting details, and service deliverables."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 52,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage_FAQ"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 53,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage_FAQ"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 54,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "company_policy"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 55,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Privacy Policy, Terms, and Code of Conduct emphasize data protection, user rights, anti-harassment, inclusive community standards."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 56,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "legal"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 57,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "legal"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 58,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "why_choose_us"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 59,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 4
+              }
+            }
+          },
+          "pageContent": "Why Choose Us?\n1. Deliver On Time: We provide cutting-edge IT services with a commitment to timeliness, efficiency, and excellence.\n2. Empowering Your Business: Providing tailored IT solutions and services to enhance efficiency, security, innovation, and long-term growth.\n3. Industry-Standard IT Solutions: Our solutions are designed to grow with your business, ensuring long-term success and scalability."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 60,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Why Choose Us"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 61,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 62,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Why Choose Us"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 63,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "homepage"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 64,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "contact_info"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 65,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "You can contact A S CodeLabs via email at admin@ascodelabs.com or by phone at +91 7806902301."
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 66,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Contact"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 67,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "footer"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 68,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "Contact"
+        }
+      },
+      {
+        "json": {
+          "metadata": {
+            "source": "blob",
+            "blobType": "application/json",
+            "line": 69,
+            "loc": {
+              "lines": {
+                "from": 1,
+                "to": 1
+              }
+            }
+          },
+          "pageContent": "footer"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Postgres PGVector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Ollama": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Postgres PGVector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Postgres PGVector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ad619301-21cd-4340-bb19-b5fa08ed8f55",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2916005d69ce2ef5a9463b67612f5e3994d521cc1aac2e6995d5cf795137ee17"
+  },
+  "id": "ZmNncO3Da44zOUQh",
+  "tags": []
+}
